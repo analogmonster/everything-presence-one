@@ -52,9 +52,9 @@ wifi:
     # Set this to the IP of the ESP
     static_ip: ${static_ip}
     # Set this to the IP address of the router. Often ends with .1
-    gateway: ${gateway}192.168.0.1
+    gateway: ${gateway}
     # The subnet of the network. 255.255.255.0 works for most home networks.
-    subnet: ${subnet}255.255.255.0
+    subnet: ${subnet}
 
 captive_portal:
 
@@ -174,7 +174,7 @@ binary_sensor:
     id: mmwave
     device_class: occupancy
     pin:
-      number: GPIO15
+      number: GPIO16
       mode: INPUT_PULLDOWN
 #  - platform: gpio
 #    pin:
@@ -205,8 +205,8 @@ binary_sensor:
 #      }
 uart:
   id: uart_bus
-  tx_pin: GPIO13
-  rx_pin: GPIO14
+  tx_pin: GPIO4
+  rx_pin: GPIO5
   baud_rate: 115200
   debug:
     direction: BOTH
