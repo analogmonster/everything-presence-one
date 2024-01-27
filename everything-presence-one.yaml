@@ -1,6 +1,7 @@
 substitutions:
   name: "mmWave sensor"
   friendly_name: "mmWave"
+  add_mac_suffix: "false"
   # You will probably want to change the static IP below
   static_ip: 192.168.0.155 
   gateway: 192.168.0.1
@@ -19,7 +20,7 @@ substitutions:
 esphome:
   name: ${name}
   friendly_name: ${friendly_name}
-  name_add_mac_suffix: true
+  name_add_mac_suffix: $(add_mac_suffix)
   project:
     name: ${project_name}
     version: ${project_version}
